@@ -19,6 +19,8 @@ struct NoopSampler {
     int noop;
 };
 
+#include "bgfx_shader.sh"
+
 #ifdef INSTANCING__ON
 vec3 instMul(vec3 _vec, mat3 _mtx) {
     return ((_vec) * (_mtx)); // Attention!

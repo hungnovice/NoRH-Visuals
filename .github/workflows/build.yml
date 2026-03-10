@@ -1,0 +1,26 @@
+name: Build NoRH Visuals
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install lazurite rich
+      - name: Build Pack
+        run: |
+          chmod +x build.sh
+          ./build.sh setup
+          ./build.sh pack
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: NoRH-Visuals-Pack
+          path: build/*.mcpack

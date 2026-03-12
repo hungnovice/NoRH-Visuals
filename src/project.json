@@ -1,18 +1,19 @@
 {
     "base_profile": {
-        "merge_source": [
+        "merge_source": [ //Lấy shader/material gốc của Minecraft (vanilla) làm nền.
             "vanilla"
         ],
-        "include_patterns": [
+        "include_patterns": [ //Tool sẽ include tất cả file.Tất cả đều được đọc.
+
             "*"
         ],
-        "exclude_patterns": [
+        "exclude_patterns": [ //Phần này là loại bỏ file / folder không cần build.
             ".*",
             "_*",
             "include",
             "vanilla"
         ],
-        "include_search_paths": [
+        "include_search_paths": [ //những dòng có include
             "include"
         ]
     },

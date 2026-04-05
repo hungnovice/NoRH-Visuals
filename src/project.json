@@ -1,0 +1,27 @@
+{
+    "base_profile": {
+        "platforms": ["Direct3D_SM65"],
+    "merge_source": ["vanilla"],
+    "include_patterns": [
+      "materials/*ForwardPBR*",
+      "materials/StarsForwardPBR"
+    ],
+    "exclude_patterns": ["include/*", "vanilla/*"],
+    "include_search_paths": [
+      "include",
+      "include/bgfx"
+    ]
+  },
+  "profiles": {
+    "windows": {
+      "platforms": ["Direct3D_SM65"]
+    },
+    "android": {
+      "platforms": ["ESSL_310"]
+    },
+    "ios": {
+      "platforms": ["Metal"]
+    }
+  }
+}
+    
